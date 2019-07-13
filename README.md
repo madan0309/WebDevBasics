@@ -1,4 +1,4 @@
-Visit Pages Here: https://madan0309.github.io/WebDevBasics/
+Visit Pages Here: https://madan0309.github.io/WebDevBasics/index.html
 
 ## Welcome to GitHub Pages
 
