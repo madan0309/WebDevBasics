@@ -1,0 +1,99 @@
+#test-runner {
+    width: 50%;
+    background-color: aliceblue;
+    height: 100%;
+    width: 100%;
+    border: 2px solid darkblue;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;    
+}
+
+ul {
+    list-style-type: none;
+    margin: 5px 5px;
+    padding: 10px 15px 0px;
+    /* border: 1px solid darkblue; */
+    width: 100%;
+    /* list-style-image: url('http://code.iamkate.com/javascript/collapsible-lists/list-item.png');
+    list-style-position: inside; */
+}
+
+ul.folder {
+    color: darkred;
+    font-weight: normal;
+}
+
+.collapsible label:hover {
+    cursor: pointer;
+}
+
+li {
+    font-weight: lighter;
+    width: 100%;
+    margin: 4px 10px;
+    overflow: hidden;
+    /* border: 1px solid darkblue; */
+    text-align: left;
+    font-size: 0.8em;
+    display: '';
+}
+
+li.testpoint {
+    color: darkolivegreen;
+    font-weight: lighter;
+}
+
+ul.testcase {
+    color: darkslateblue;
+}
+li span {
+    text-align: left;
+}
+.testcase-icon {
+    background: url(./static/images/test-icon.jpg) no-repeat left top;
+    background-size: 1.2em;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    display: inline-block;
+    margin-left:  15px;
+}
+
+.folder-open {
+    background: url(./static/images/folder-icon.png) no-repeat left top;
+    background-size: 1em;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.list-group-item {
+    padding: 0.5em 0.25em;
+}
+.list-group-item label:hover {
+    cursor: pointer;
+}
+.fa-caret-right, .fa-caret-down {
+    padding-right: 5px;
+}
+
+.fa-folder-plus, .fa-folder-open, .fa-plus, .fa-circle-notch, .fa-minus, .fa-file-code {
+    margin-right: 10px;
+    font-size: 1em;
+}
+.fa-plus, .fa-minus {
+    font-size: 0.8em;
+}
+
+.fa-folder-tree {
+    margin-right: 10px;
+    /* width:  10px; */
+}
+
+label:hover {
+    cursor: pointer;
+}
