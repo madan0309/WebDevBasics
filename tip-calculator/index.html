@@ -5,34 +5,64 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width initial-scale=1">
         <title>Tip Calculator</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <div id="container">
+        <div id="container" class="container">
             <h1>Tip Calculator</h1>
             <div id="calculator">
                 <form id="inputform">
-                    <div class="input" id="bill">
-                        <p>How much was your bill?</p>
-                        <input class="bill-amount" type="text" placeholder="Bill Amount">
+                    <div class="input-group mb-3" id="bill">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Bill Amount $</span>
+                        </div>
+                        <input id="bill-amount" type="text" class="form-control input-fields" aria-label="Amount (to the nearest dollar)"
+                                placeholder="enter bill amount here!">
                     </div>
-                    <div class="input" id="service">
-                            <p>How was your service?</p>
-                            <select>
-                                    <option disabled selected value="0">-- Choose an Option --</option>
-                                    <option value="0.3">30&#37; &#45; Outstanding</option>
-                                    <option value="0.2">20&#37; &#45; Good</option>
-                                    <option value="0.15">15&#37; &#45; It was OK</option>
-                                    <option value="0.1">10&#37; &#45; Bad</option>
-                                    <option value="0.05">5&#37; &#45; Terrible</option>
-                            </select>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Select Service Quality</span>
+                        </div>
+                        <select class="custom-select input-fields" id="service-qual">
+                            <option selected value="0.1">Choose...</option>
+                            <option value="0.3">Outstanding</a>
+                            <option value="0.2">Good</a>
+                            <option value="0.15">It was OK</a>
+                            <option value="0.1">Bad</a>
+                            <option value="0.05">Terrible</a>
+                        </select>
                     </div>
-                    <div class="input" id="peoplecount">
-                            <p>How many people sharing the bill?</p>
-                            <input class="people-count" type="text" placeholder="Number of People">
+
+                    <div class="input-group mb-3" id="bill">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Number of People : </span>
+                        </div>
+                        <input id="people-count" type="text" class="form-control input-fields" aria-label="Amount (to the nearest dollar)"
+                                placeholder="enter number of people in the party!">
                     </div>
                 </form>
+
+                <div id="calculate">
+                    <button type="button" class="btn btn-success">Calculate!</button>
+                </div>
+                <br>
+                <div id="result">
+                    <div class="input-group mb-3" id="bill">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Tip Amount $ : </span>
+                        </div>
+                        <span id="tip-amount" type="text" class="form-control"></span>
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="each">each</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </html>

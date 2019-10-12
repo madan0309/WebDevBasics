@@ -4,15 +4,28 @@
         <meta charset="utf-8">
         <title>Visit Below Pages</title>
         <style>
+            * {
+                box-sizing: border-box;
+            }
             a {
                 background-color: #00ffff;
                 border: 1px black solid;
                 height: auto;
-                width: 300px;
                 margin : 10px;
+                width: 25%;
                 float : left;
                 text-align: center;
                 text-transform: capitalize;
+            }
+            li {
+                display: block;
+                width: 100%;
+            }
+            div {
+                display: block;
+            }
+            ul {
+                width: 100%;
             }
         </style>
     </head>
@@ -20,12 +33,17 @@
     <body>
         <h1>Visit Below Pages</h1>
         <div>
-            <a href="https://madan0309.github.io/WebDevBasics/foodmarket/">
-            food-market website
-            </a>
-            <a href="https://madan0309.github.io/WebDevBasics/restaurant">
-                restaurant website
-            </a>
+            <ul>
+            <li>
+                <a href="https://madan0309.github.io/WebDevBasics/foodmarket/">food-market website</a>
+            </li>
+            <li>
+                <a href="https://madan0309.github.io/WebDevBasics/restaurant">restaurant website</a>
+            </li>
+            <li>
+                <a href="https://madan0309.github.io/WebDevBasics/tip-calculator">tip-calculator</a>
+            </li>
+            </ul>
         </div>
     </body>
 </html>
