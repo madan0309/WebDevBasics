@@ -1,0 +1,135 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none; /* Styled in normalize.css */
+    text-decoration: none;
+}
+body {
+    background-color: rgb(50, 101, 134);
+    font-family: sans-serif, Georgia, 'Times New Roman', Times;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+}
+
+.navhead {
+    display: flex;
+    flex-direction: row;
+    z-index: 1000;
+    position: relative;
+    justify-content: space-between;
+}
+
+.hamburger {
+    cursor: pointer;
+    transition-duration: 250ms;
+    z-index: 3;
+    transition-timing-function: cubic-bezier(.13,.24,.35,1.64);
+}
+
+.hamburger-line {
+    width: 50px;
+    height: 7px;
+    border-radius: 25px;
+    box-shadow: 0px 3px 13px rgba(0,0,0,.3);
+    background-color: #ccc;
+    margin-bottom: 5px;
+    transition-delay: 50ms;
+    transition-duration: 250ms;
+}
+
+.navlist ul {
+    transform: translate(-50%, -50%);
+    transition-delay: 50ms;
+    transition-duration: 300ms;
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    z-index: 2000;
+}
+
+.navlist::before, .navlist:after {
+    background-color:#b94071;
+    content:"";
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 0%;
+    transition: all 100ms ease-in-out 300ms;
+}
+.navlist::before {
+    left: 0;
+}
+.navlist::after {
+    right:0;
+}
+.navlist-item {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.navlist-item a {
+    color: #ccc;
+    font-size: 1.5em;
+}
+h1 {
+    text-transform: uppercase;
+    color: #ccc;
+    letter-spacing: 0.125em;
+}
+h2 {
+    font-size: 1.25em;
+}
+.main-content {
+    line-height: 1.5em;
+    color: #ccc;
+    margin: 20px 0px;
+    font-size: 1.1em;
+    letter-spacing: 0.04em;
+}
+.main-content p {
+    transition-delay: 150ms;
+    transition-duration: 850ms;
+}
+
+.main-footer {
+    color: #ccc;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+}
+
+
+/* Hamburger Active Styles */
+.hamburger.active-element.active .hamburger-line.one {
+    box-shadow: 0px 3px 13px rgba(0,0,0,.4);
+    transform: translate(0, 12px) rotate(45deg);
+}
+.hamburger.active-element.active .hamburger-line.three {
+    box-shadow: 0px 3px 13px rgba(0,0,0,.4);
+    transform: translate(0, -12px) rotate(-45deg);
+}
+.hamburger.active-element.active .hamburger-line.two {
+    transform: translateX(-55px);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.navlist.active-element.active ul{
+    top: 50%;
+    transition-delay: 560ms;
+    transition-duration: 240ms;
+}
+
+.navlist.active::before, .navlist.active::after {
+    width: 25vw;
+}
+
+.container.active p{
+    color: rgb(50, 101, 134);
+    transition-delay: 250ms;
+    transition-duration: 350ms;
+}
