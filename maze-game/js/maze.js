@@ -258,12 +258,12 @@ function setupTheGame() {
             "boundaryprob": 0.5
         },
         "2" : {
-            "size" : 10,
-            "boundaryprob": 0.6
+            "size" : 14,
+            "boundaryprob": 0.5
         },
         "3" : {
-            "size" : 14,
-            "boundaryprob": 0.60
+            "size" : 20,
+            "boundaryprob": 0.5
         }
     }
     let size = mazeCategory[level].size;
