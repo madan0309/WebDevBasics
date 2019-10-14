@@ -1,0 +1,22 @@
+#myCanvas {
+    border: 2px solid black;
+    justify-content: center;
+    margin: 0 20%;
+    margin-top: 60px;
+}
+
+.target {
+    position: absolute;
+    bottom: 0;
+}
+
+
+.level {
+    margin-top: 100px;
+    display: flex;
+}
+
+.start {
+    width: 50%;
+    margin: 0 25%;
+}
