@@ -288,6 +288,9 @@ function setSizeOfCanvas() {
 
 window.onload = function() {
     document.getElementsByClassName("outer")[0].style.maxHeight = window.innerHeight;
+    document.addEventListener("touchstart", (evt) => {
+        console.log(evt);
+    })
     setSizeOfCanvas();
     setupTheGame();
     window.addEventListener("resize", setSizeOfCanvas);
