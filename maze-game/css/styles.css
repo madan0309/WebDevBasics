@@ -1,13 +1,13 @@
 #myCanvas {
     border: 2px solid black;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 2vh;
     box-sizing: border-box;
 }
 
 #canvas-container {
     width : 100%;
-    height: 70vh;
+    height: 60vh;
 }
 
 .target {
@@ -24,4 +24,38 @@
 .start {
     width: 50%;
     margin: 0 25%;
+}
+
+.keyboard {
+    margin-top: 5vh;
+    width: 10vh;
+    height: 10vh;
+    background-color: #ccc;
+    clear: top;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.arrowkey.keyrow {
+    height: 33.33%;
+}
+.arrowkey.right, .arrowkey.left {
+    width: 50%;
+}
+.arrowkey.up {
+    text-align: center;
+}
+.arrowkey.down {
+    text-align: center;
+}
+.arrowkey.right {
+    text-align: right;
+}
+.arrowkey.left {
+    text-align: left;
+}
+.middlekeys {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
 }
