@@ -286,10 +286,43 @@ function setSizeOfCanvas() {
     setupTheGame();
 }
 
+function simulateKeyboardEvent(keyCode) {
+    // fire keydown event
+    let evt = new KeyboardEvent("keydown", {keyCode: keyCode});
+    window.dispatchEvent(evt);
+    // fire keyup event
+    let evt2 = new KeyboardEvent("keyup", {keyCode: keyCode});
+    window.dispatchEvent(evt2);
+};
+
+function touchEventHandle(evt) {
+    let arrowkey = evt.target;
+    arrowkey.style.backgroundColor = "black";
+    arrowkey.style.color = "white";
+    if(evt.target.classList.contains("up")) {
+        simulateKeyboardEvent(38);
+    } else if(evt.target.classList.contains("down")) {
+        simulateKeyboardEvent(40);
+    } else if(evt.target.classList.contains("right")) {
+        simulateKeyboardEvent(39);
+    } else {
+        // left arrow
+        simulateKeyboardEvent(37);
+    }
+    setTimeout(() => {
+        arrowkey.style.backgroundColor = "#eee";
+        arrowkey.style.color = "black";
+    }, 100)
+}
 window.onload = function() {
     document.getElementsByClassName("outer")[0].style.maxHeight = window.innerHeight;
     setSizeOfCanvas();
     setupTheGame();
+    // mobile touch event listeners
+    document.getElementsByClassName("uparrow")[0].addEventListener("touchend", touchEventHandle);
+    document.getElementsByClassName("downarrow")[0].addEventListener("touchend", touchEventHandle);
+    document.getElementsByClassName("rightarrow")[0].addEventListener("touchend", touchEventHandle);
+    document.getElementsByClassName("leftarrow")[0].addEventListener("touchend", touchEventHandle);
     window.addEventListener("resize", setSizeOfCanvas);
     window.addEventListener('keydown', function(evt) {
         // Arrow UP
