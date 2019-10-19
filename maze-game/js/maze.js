@@ -299,11 +299,11 @@ function touchEventHandle(evt) {
     let arrowkey = evt.target;
     arrowkey.style.backgroundColor = "black";
     arrowkey.style.color = "white";
-    if(evt.target.classList.contains("up")) {
+    if(evt.target.classList.contains("uparrow")) {
         simulateKeyboardEvent(38);
-    } else if(evt.target.classList.contains("down")) {
+    } else if(evt.target.classList.contains("downarrow")) {
         simulateKeyboardEvent(40);
-    } else if(evt.target.classList.contains("right")) {
+    } else if(evt.target.classList.contains("rightarrow")) {
         simulateKeyboardEvent(39);
     } else {
         // left arrow
