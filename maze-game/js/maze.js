@@ -296,6 +296,9 @@ function simulateKeyboardEvent(keyCode) {
 };
 
 function touchEventHandle(evt) {
+    let arrowkey = evt.target;
+    arrowkey.style.backgroundColor = "black";
+    arrowkey.style.color = "white";
     if(evt.target.classList.contains("up")) {
         simulateKeyboardEvent(38);
     } else if(evt.target.classList.contains("down")) {
@@ -306,12 +309,13 @@ function touchEventHandle(evt) {
         // left arrow
         simulateKeyboardEvent(37);
     }
+    setTimeout(() => {
+        arrowkey.style.backgroundColor = "#eee";
+        arrowkey.style.color = "black";
+    }, 100)
 }
 window.onload = function() {
     document.getElementsByClassName("outer")[0].style.maxHeight = window.innerHeight;
-    document.addEventListener("touchstart", (evt) => {
-        console.log(evt);
-    })
     setSizeOfCanvas();
     setupTheGame();
     // mobile touch event listeners
